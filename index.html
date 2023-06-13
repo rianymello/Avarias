@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+  <title>Inicio</title>
+  <style>
+    @keyframes diagonal-bounce {
+      0% {
+        transform: translate(0, 0);
+      }
+
+      50% {
+        transform: translate(-30px, 30px);
+      }
+
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .logo-animation {
+      animation: diagonal-bounce 2s ease-in-out infinite alternate;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+  <nav class="bg-purple-600 p-9 flex justify-end">
+    <div class="space-x-7 text-lg mr-4">
+      <a href="#">Introdução</a>
+      <a href="#">Problemas comuns</a>
+      <a href="#">Software de diagnóstico</a>
+    </div>
+  </nav>
+
+  <section class="flex items-center justify-center animate__animated animate__fadeIn">
+    <div class="mr-4 animate__animated animate__fadeIn">
+      <img src="logo.png" alt="" class="max-w-xl ml-4 hvr-float logo-animation">
+    </div>
+    <div class="flex flex-col justify-center gap-4" style="width: 500px;">
+      <h1 class="text-7xl font-bold animate__animated animate__fadeIn">Detecção de Avarias</h1>
+      <p class="text-white animate__animated animate__fadeIn">Descubra os segredos da detecção de avarias em ambientes espaciais, onde cada segundo conta para garantir a segurança e a missão. Explore o cosmos, enfrente desafios tecnológicos e mergulhe no desconhecido como um verdadeiro astronauta. Esteja preparado para enfrentar os obstáculos e superá-los com sucesso.</p>
+      <button class="mt-4 px-6 py-2 bg-purple-600 text-white rounded-lg shadow hover:bg-purple-700 transition-colors duration-300">Saiba mais</button>
+    </div>
+  </section>
+
+  <section class="mt-40 mb-40 animate__animated animate__fadeIn">
+    <div class="bg-purple-600 rounded-lg shadow-2xl p-14 text-white mx-40 animate__animated animate__fadeIn animate__delay-1s">
+      <h1 class="text-4xl font-bold">Introdução</h1>
+      <div class="my-4 flex items-center">
+        <p class="mr-4">Em um mundo tecnológico em constante evolução, é comum nos depararmos com problemas em nossos computadores. A BIOS falha, o disco rígido apresenta sinais de falha e as ventoinhas emitem ruídos desconcertantes. O medo de um colapso completo do nosso PC é real. Mas não se preocupe, pois estamos aqui para ajudar. Aqui vamos explorar estratégias eficazes para lidar com essas situações e trazer de volta o bom funcionamento do seu computador.</p>
+        <p>Descubra como recuperar o ambiente de trabalho, solucionar problemas de disco rígido e lidar com a resposta da BIOS. Nosso objetivo é restaurar a confiança em seu computador e fornecer as respostas que você precisa. Junte-se a nós nesta jornada de resolução de problemas tecnológicos e descubra os segredos para superar as adversidades que surgem no mundo dos computadores.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-purple-600 text-white p-14">
+    <div class="flex flex-col">
+      <div>
+        <h1 class="text-2xl font-bold mb-4">LOGO</h1>
+      </div>
+      <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+        <div class="w-full md:w-1/4 mb-4 md:mb-0">
+          <h3 class="text-lg font-bold mb-2">Emails</h3>
+          <ul>
+            <li class="mb-1">email1@example.com</li>
+            <li class="mb-1">email2@example.com</li>
+            <li>email3@example.com</li>
+          </ul>
+        </div>
+        <div class="w-full md:w-1/4 mb-4 md:mb-0">
+          <h3 class="text-lg font-bold mb-2">Telefones</h3>
+          <ul>
+            <li class="mb-1">(123) 456-7890</li>
+            <li class="mb-1">(987) 654-3210</li>
+            <li>(555) 123-4567</li>
+          </ul>
+        </div>
+        <div class="w-full md:w-1/4">
+          <h3 class="text-lg font-bold mb-2">Links</h3>
+          <ul>
+            <li class="mb-1"><a href="#">Fontes</a></li>
+            <li class="mb-1"><a href="#">Repositório</a></li>
+            <li><a href="#">Site da Escola</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.tailwindcss.com/2.2.19/tailwind.min.js"></script>
+</body>
+
+</html>
