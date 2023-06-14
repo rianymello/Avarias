@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Importação dos estilos do Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Importação dos estilos do AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+   <!-- Importação dos estilos do Hover.css -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+
+  <!-- Ícone do site -->
+  <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+
+  <title>Inicio</title>
+
+  <!-- Estilos personalizados -->
+  <style>
+
+     /* Animação de flutuar */
+  @keyframes diagonal-bounce {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0px, 30px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  /* Animação de fade-in */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Aplicação da animação de flutuar na classe "logo-animation" */
+  .logo-animation {
+    animation: diagonal-bounce 3s ease-in-out infinite alternate;
+  }
+
+  .hvr-underline-from-center::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      bottom: 0;
+      left: 0;
+      background-color: white;
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .hvr-underline-from-center:hover::before {
+      visibility: visible;
+      transform: scaleX(1);
+    }
+  
+  </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+  <!-- Barra de navegação -->
+  <nav class="bg-purple-600 p-9 flex items-center justify-between">
+    <div>
+      <img class="w-40" src="../assets/img/logotipo.png" alt="logotipo">
+    </div>
+    <div class="space-x-7 text-lg mr-4">
+      <a href="#" class="hvr-underline-from-center" >Introdução</a>
+      <a href="./problemas.html" class="hvr-underline-from-center">Problemas comuns</a>
+      <a href="#" class="hvr-underline-from-center">Software de diagnóstico</a>
+    </div>
+  </nav>
+  
+    
+
+  <!-- Seção do banner -->
+  <section class="flex items-center justify-center">
+    <div class="mr-4">
+      <img src="../assets/img/bannerImg.png" alt="" class="max-w-xl ml-4 hvr-float logo-animation">
+    </div>
+    <div class="flex flex-col justify-center gap-4" style="width: 500px;">
+      <h1 class="text-7xl font-bold" data-aos="fade-up">Detecção de Avarias</h1>
+      <p class="text-white" data-aos="fade-up" data-aos-delay="200">Descubra os segredos da detecção de avarias em ambientes espaciais, onde cada segundo conta para garantir a segurança e a missão. Explore o cosmos, enfrente desafios tecnológicos e mergulhe no desconhecido como um verdadeiro astronauta. Esteja preparado para enfrentar os obstáculos e superá-los com sucesso.</p>
+      <button class="mt-4 px-6 py-2 bg-purple-600 text-white rounded-lg shadow hover:bg-purple-700 transition-colors duration-300">Saiba mais</button>
+    </div>
+  </section>
+
+  <!-- Seção de introdução -->
+  <section class="mt-40 mb-40" data-aos="fade-up">
+    <div class="bg-purple-600 rounded-lg shadow-2xl p-14 text-white mx-40">
+      <h1 class="text-4xl font-bold">Introdução</h1>
+      <div class="my-4 flex items-center">
+        <p class="mr-4">Em um mundo tecnológico em constante evolução, é comum nos depararmos com problemas em nossos computadores. A BIOS falha, o disco rígido apresenta sinais de falha e as ventoinhas emitem ruídos desconcertantes. O medo de um colapso completo do nosso PC é real. Mas não se preocupe, pois estamos aqui para ajudar. Aqui vamos explorar estratégias eficazes para lidar com essas situações e trazer de volta o bom funcionamento do seu computador.</p>
+        <p>Descubra como recuperar o ambiente de trabalho, solucionar problemas de disco rígido e lidar com a resposta da BIOS. Nosso objetivo é restaurar a confiança em seu computador e fornecer as respostas que você precisa. Junte-se a nós nesta jornada de resolução de problemas tecnológicos e descubra os segredos para superar as adversidades que surgem no mundo dos computadores.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-purple-600 text-white p-14">
+    <div class="flex flex-col">
+      <div>
+        <img class="w-20" src="../assets/img/logotipo.png" alt="logotipo">
+      </div>
+      <div class="flex flex-col md:flex-row md:justify-between md:items-start ml-36">
+        <div class="w-full md:w-1/4 mb-4 md:mb-0">
+          <h3 class="text-lg font-bold mb-2">Emails</h3>
+          <ul>
+            <li class="mb-1">email1@example.com</li>
+            <li class="mb-1">email2@example.com</li>
+            <li>email3@example.com</li>
+          </ul>
+        </div>
+        <div class="w-full md:w-1/4 mb-4 md:mb-0">
+          <h3 class="text-lg font-bold mb-2">Telefones</h3>
+          <ul>
+            <li class="mb-1">(123) 456-7890</li>
+            <li class="mb-1">(987) 654-3210</li>
+            <li>(555) 123-4567</li>
+          </ul>
+        </div>
+        <div class="w-full md:w-1/4">
+          <h3 class="text-lg font-bold mb-2">Links</h3>
+          <ul>
+            <li class="mb-1"><a href="#">Fontes</a></li>
+            <li class="mb-1"><a href="#">Repositório</a></li>
+            <li><a href="#">Site da Escola</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.tailwindcss.com/2.2.19/tailwind.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  
+  <script>
+    // Inicialização do AOS (Animate On Scroll)
+    AOS.init({
+      once: true // Isso faz com que animações sejam executadas apenas uma vez
+    });
+  </script>
+</body>
+</html>
