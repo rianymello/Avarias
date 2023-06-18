@@ -13,8 +13,10 @@
    <!-- Importação dos estilos do Hover.css -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
 
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
   <!-- Ícone do site -->
-  <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
 
   <title>Inicio</title>
 
@@ -66,6 +68,19 @@
       visibility: visible;
       transform: scaleX(1);
     }
+
+     /* Estilizando a barra de rolagem */
+::-webkit-scrollbar {
+  width: 8px; 
+  background-color: transparent; 
+}
+
+/* Estilizando a barrinha da barra de rolagem */
+::-webkit-scrollbar-thumb {
+  background-color: #d4d4d4; 
+  border-radius: 2px; 
+  transform-origin: top; 
+}
   
   </style>
 </head>
@@ -80,7 +95,6 @@
     <div class="space-x-7 text-lg mr-4">
       <a href="#" class="hvr-underline-from-center" >Introdução</a>
       <a href="./src/problemas.html" class="hvr-underline-from-center">Problemas comuns</a>
-      <a href="#" class="hvr-underline-from-center">Software de diagnóstico</a>
     </div>
   </nav>
   
@@ -109,40 +123,41 @@
     </div>
   </section>
 
-  <!-- Rodapé -->
-  <footer class="bg-purple-600 text-white p-14">
-    <div class="flex flex-col">
+ <!-- Rodapé -->
+<footer class="bg-purple-600 text-white p-14">
+  <div class="flex flex-col">
       <div>
-        <img class="w-20" src="./assets/img/logotipo.png" alt="logotipo">
+          <img class="w-20" src="./assets/img/logotipo.png" alt="logotipo">
       </div>
       <div class="flex flex-col md:flex-row md:justify-between md:items-start ml-36">
-        <div class="w-full md:w-1/4 mb-4 md:mb-0">
-          <h3 class="text-lg font-bold mb-2">Emails</h3>
-          <ul>
-            <li class="mb-1">email1@example.com</li>
-            <li class="mb-1">email2@example.com</li>
-            <li>email3@example.com</li>
-          </ul>
-        </div>
-        <div class="w-full md:w-1/4 mb-4 md:mb-0">
-          <h3 class="text-lg font-bold mb-2">Telefones</h3>
-          <ul>
-            <li class="mb-1">(123) 456-7890</li>
-            <li class="mb-1">(987) 654-3210</li>
-            <li>(555) 123-4567</li>
-          </ul>
-        </div>
-        <div class="w-full md:w-1/4">
-          <h3 class="text-lg font-bold mb-2">Links</h3>
-          <ul>
-            <li class="mb-1"><a href="#">Fontes</a></li>
-            <li class="mb-1"><a href="#">Repositório</a></li>
-            <li><a href="#">Site da Escola</a></li>
-          </ul>
-        </div>
+          <div class="w-full md:w-1/4 mb-4 md:mb-0">
+              <h3 class="text-lg font-bold mb-2">Contatos</h3>
+              <ul>
+                  <li class="mb-1">mello.riany@gmail.com</li>
+                  <li class="mb-1">tgpsi22rianymello@etap.pt</li>
+                  <li><a href="https://github.com/rianymello" class="hover:text-gray-400"><i class="fab fa-github" style="color: #ffffff;"></i></a></li>
+              </ul>
+          </div>
+          <div class="w-full md:w-1/4 mb-4 md:mb-0">
+              <h3 class="text-lg font-bold mb-2">Fontes</h3>
+              <ul>
+                  <li class="mb-1"><a href="#" class="hover:text-gray-400">Informações</a></li>
+                  <li class="mb-1"><a href="#" class="hover:text-gray-400">Icones</a></li>
+                  <li><a href="#" class="hover:text-gray-400">Imagem</a></li>
+              </ul>
+          </div>
+          <div class="w-full md:w-1/4">
+              <h3 class="text-lg font-bold mb-2">Links importantes</h3>
+              <ul>
+                  <li class="mb-1"><a href="#" class="hover:text-gray-400">Portifolio</a></li>
+                  <li class="mb-1"><a href="#" class="hover:text-gray-400">Repositório</a></li>
+                  <li><a href="#" class="hover:text-gray-400">Site da Escola</a></li>
+              </ul>
+          </div>
       </div>
-    </div>
-  </footer>
+  </div>
+</footer>
+
 
   <!-- Scripts -->
   <script src="https://cdn.tailwindcss.com/2.2.19/tailwind.min.js"></script>
