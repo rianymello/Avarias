@@ -10,10 +10,11 @@
   <!-- Importação dos estilos do AOS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-   <!-- Importação dos estilos do Hover.css -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
-
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- Importação dos estilos do Hover.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+    
+  <!-- Importação dos icones Font Awesome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
   <!-- Ícone do site -->
   <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
@@ -22,36 +23,35 @@
 
   <!-- Estilos personalizados -->
   <style>
+    /* Animação de flutuar */
+    @keyframes diagonal-bounce {
+      0% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(0px, 30px);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+    }
 
-     /* Animação de flutuar */
-  @keyframes diagonal-bounce {
-    0% {
-      transform: translate(0, 0);
+    /* Animação de fade-in */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
-    50% {
-      transform: translate(0px, 30px);
-    }
-    100% {
-      transform: translate(0, 0);
-    }
-  }
 
-  /* Animação de fade-in */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
+    /* Aplicação da animação de flutuar na classe "logo-animation" */
+    .logo-animation {
+      animation: diagonal-bounce 3s ease-in-out infinite alternate;
     }
-    to {
-      opacity: 1;
-    }
-  }
 
-  /* Aplicação da animação de flutuar na classe "logo-animation" */
-  .logo-animation {
-    animation: diagonal-bounce 3s ease-in-out infinite alternate;
-  }
-
-  .hvr-underline-from-center::before {
+    .hvr-underline-from-center::before {
       content: "";
       position: absolute;
       width: 100%;
@@ -69,19 +69,19 @@
       transform: scaleX(1);
     }
 
-     /* Estilizando a barra de rolagem */
-::-webkit-scrollbar {
-  width: 8px; 
-  background-color: transparent; 
-}
+    /* Estilizando a barra de rolagem */
+    ::-webkit-scrollbar {
+      width: 8px;
+      background-color: transparent;
+    }
 
-/* Estilizando a barrinha da barra de rolagem */
-::-webkit-scrollbar-thumb {
-  background-color: #d4d4d4; 
-  border-radius: 2px; 
-  transform-origin: top; 
-}
-  
+    /* Estilizando a barrinha da barra de rolagem */
+    ::-webkit-scrollbar-thumb {
+      background-color: #d4d4d4;
+      border-radius: 2px;
+      transform-origin: top;
+    }
+
   </style>
 </head>
 
@@ -93,12 +93,10 @@
       <img class="w-40" src="./assets/img/logotipo.png" alt="logotipo">
     </div>
     <div class="space-x-7 text-lg mr-4">
-      <a href="#" class="hvr-underline-from-center" >Introdução</a>
+      <a href="#" class="hvr-underline-from-center">Introdução</a>
       <a href="./src/problemas.html" class="hvr-underline-from-center">Problemas comuns</a>
     </div>
   </nav>
-  
-    
 
   <!-- Seção do banner -->
   <section class="flex items-center justify-center">
@@ -108,12 +106,12 @@
     <div class="flex flex-col justify-center gap-4" style="width: 500px;">
       <h1 class="text-7xl font-bold" data-aos="fade-up">Detecção de Avarias</h1>
       <p class="text-white" data-aos="fade-up" data-aos-delay="200">Descubra os segredos da detecção de avarias em ambientes espaciais, onde cada segundo conta para garantir a segurança e a missão. Explore o cosmos, enfrente desafios tecnológicos e mergulhe no desconhecido como um verdadeiro astronauta. Esteja preparado para enfrentar os obstáculos e superá-los com sucesso.</p>
-      <button class="mt-4 px-6 py-2 bg-purple-600 text-white rounded-lg shadow hover:bg-purple-700 transition-colors duration-300">Saiba mais</button>
+      <button onclick="smoothScroll('#introduction')" class="mt-4 px-6 py-2 bg-purple-600 text-white rounded-lg shadow hover:bg-purple-700 transition-colors duration-300">Saiba mais</button>
     </div>
   </section>
 
   <!-- Seção de introdução -->
-  <section class="mt-40 mb-40" data-aos="fade-up">
+  <section id="introduction" class="mt-40 mb-40" data-aos="fade-up">
     <div class="bg-purple-600 rounded-lg shadow-2xl p-14 text-white mx-40">
       <h1 class="text-4xl font-bold">Introdução</h1>
       <div class="my-4 flex items-center">
@@ -123,51 +121,75 @@
     </div>
   </section>
 
- <!-- Rodapé -->
+<!-- Seção do rodapé -->
 <footer class="bg-purple-600 text-white p-14">
   <div class="flex flex-col">
-      <div>
-          <img class="w-20" src="./assets/img/logotipo.png" alt="logotipo">
+    <div>
+      <img class="w-20" src="./assets/img/logotipo.png" alt="logotipo">
+    </div>
+    <div class="flex flex-col md:flex-row md:justify-between md:items-start ml-36">
+      <div class="w-full md:w-1/4 mb-4 md:mb-0">
+        <h3 class="text-lg font-bold mb-2">Contatos</h3>
+        <ul>
+          <li class="mb-1">mello.riany@gmail.com</li>
+          <li class="mb-1">tgpsi22rianymello@etap.pt</li>
+          <li>
+            <a href="https://github.com/rianymello" target="_blank">
+              <i class="fab fa-github" style="color: #ffffff;"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/rianymello/" target="_blank">
+              <i class="fab fa-linkedin" style="color: #ffffff;"></i>
+            </a>
+          </li>
+        </ul>
       </div>
-      <div class="flex flex-col md:flex-row md:justify-between md:items-start ml-36">
-          <div class="w-full md:w-1/4 mb-4 md:mb-0">
-              <h3 class="text-lg font-bold mb-2">Contatos</h3>
-              <ul>
-                  <li class="mb-1">mello.riany@gmail.com</li>
-                  <li class="mb-1">tgpsi22rianymello@etap.pt</li>
-                  <li><a href="https://github.com/rianymello" class="hover:text-gray-400"><i class="fab fa-github" style="color: #ffffff;"></i></a></li>
-              </ul>
-          </div>
-          <div class="w-full md:w-1/4 mb-4 md:mb-0">
-              <h3 class="text-lg font-bold mb-2">Fontes</h3>
-              <ul>
-                  <li class="mb-1"><a href="#" class="hover:text-gray-400">Informações</a></li>
-                  <li class="mb-1"><a href="#" class="hover:text-gray-400">Icones</a></li>
-                  <li><a href="#" class="hover:text-gray-400">Imagem</a></li>
-              </ul>
-          </div>
-          <div class="w-full md:w-1/4">
-              <h3 class="text-lg font-bold mb-2">Links importantes</h3>
-              <ul>
-                  <li class="mb-1"><a href="#" class="hover:text-gray-400">Portifolio</a></li>
-                  <li class="mb-1"><a href="#" class="hover:text-gray-400">Repositório</a></li>
-                  <li><a href="#" class="hover:text-gray-400">Site da Escola</a></li>
-              </ul>
-          </div>
+      <div class="w-full md:w-1/4 mb-4 md:mb-0">
+        <h3 class="text-lg font-bold mb-2">Fontes</h3>
+        <ul>
+          <li class="mb-1">
+            <a href="https://danieltendeiro.weebly.com/avarias-mais-comuns.html" target="_blank">Informações</a>
+          </li>
+          <li class="mb-1">
+            <a href="https://www.recraft.ai/" target="_blank">Imagens</a>
+          </li>
+          <li class="mb-1">
+            <a href="https://fontawesome.com/" target="_blank">Ícones</a>
+          </li>
+        </ul>
       </div>
+      <div class="w-full md:w-1/4 mb-4 md:mb-0">
+        <h3 class="text-lg font-bold mb-2">Outros Links</h3>
+        <ul>
+          <li class="mb-1">
+            <a href="TO DEVENO QUE O DEPLOY DEU ERRU" target="_blank">Portfólio</a>
+          </li>
+          <li class="mb-1">
+            <a href="https://github.com/rianymello/Avarias" target="_blank">Repositório</a>
+          </li>
+          <li class="mb-1">
+            <a href="https://www.etap.pt/" target="_blank">Site da Escola</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </footer>
 
-
-  <!-- Scripts -->
-  <script src="https://cdn.tailwindcss.com/2.2.19/tailwind.min.js"></script>
+  <!-- Scripts personalizados -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  
+
   <script>
-    // Inicialização do AOS (Animate On Scroll)
-    AOS.init({
-      once: true // Isso faz com que animações sejam executadas apenas uma vez
-    });
+    // Ativar a animação de fade-in ao fazer scroll
+    AOS.init();
+
+    // Função para rolar suavemente para a introdução
+    function smoothScroll(target) {
+      $("html, body").animate({
+        scrollTop: $(target).offset().top
+      }, 800);
+    }
   </script>
+
 </body>
 </html>
