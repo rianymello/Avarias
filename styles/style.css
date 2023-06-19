@@ -1,0 +1,67 @@
+
+  /* Estilos compartilhados */
+  /* Estilizando a barra de rolagem */
+  ::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+  }
+
+  /* Estilizando a barrinha da barra de rolagem */
+  ::-webkit-scrollbar-thumb {
+    background-color: #d4d4d4;
+    border-radius: 2px;
+    transform-origin: top;
+  }
+
+  /* Estilos da página "index" (introdução) */
+
+  /* Animação de flutuar */
+  @keyframes diagonal-bounce {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0px, 30px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  /* Animação de fade-in */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Animação de sublinhado ao passar o mouse */
+  .hvr-underline-from-center::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hvr-underline-from-center:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+
+  /* Estilos da página "problemas" (problemas mais comuns) */
+
+  /* Estilos da lista de problemas */
+  .problema-lista {
+    list-style-type: disc;
+    margin-left: 30px;
+  }
+
